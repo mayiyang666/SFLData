@@ -1,0 +1,33 @@
+name: solov2
+lr: 1.0e-2
+batch_size: 2
+val_batch_size: 2
+weight_decay: 1.0e-4
+optimizer: sgd
+momentum: 0.9
+backbone: resnet50_fpn
+pretrained: true
+arch:
+  feat_channels: 512
+  stacked_convs: 4
+  strides: [8, 8, 16, 32, 32]
+  num_grids: [40, 36, 24, 16, 12]
+  scale_ranges: [[1, 96], [48, 192], [96, 384], [192, 768], [384, 2048]]
+  pos_scale: 0.2
+  loss_cls_weight: 1.0
+  loss_mask_weight: 3.0
+  mask_feature_head:
+    feat_channels: 128
+    end_level: 3
+    out_channels: 256
+    mask_stride: 4
+  test_cfg:
+    score_thr: 0.1
+    mask_thr: 0.5
+    nms_pre: 500
+    filter_thr: 0.05
+    kernel: gaussian
+    sigma: 2.0
+    max_per_img: 100
+num_classes: 3
+eval_class: landslide

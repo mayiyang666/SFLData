@@ -1,0 +1,26 @@
+name: mffenet
+lr: 1.0e-3
+batch_size: 2
+val_batch_size: 1
+weight_decay: 5.0e-4
+optimizer: sgd
+momentum: 0.9
+nesterov: false
+backbone: resnet101
+pretrained: true
+arch:
+  aspp_rates: [6, 12, 18]
+  aspp_dropout: 0.5
+  head_lr_mult: 10.0
+scheduler:
+  type: poly
+  power: 0.9
+num_classes: 3
+loss:
+  type: bal
+  edge_multiplier: 1.5
+  remain_rate: 0.5
+  gauss_size: 35
+  gauss_sigma: 3.0
+  class_weights: null
+eval_class: landslide

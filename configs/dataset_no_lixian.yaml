@@ -1,0 +1,32 @@
+dataset:
+  name: FlashLandslide_noLixian
+  root: ./data/DPT_region
+  classes: [landslide, road]
+  gsd_m: 0.15
+  tile_size: 1024
+  tile_overlap: 256
+  regions:
+    - Aerzhai
+    - Ganluo
+    - Guizhou_Faer
+    - hailuogou_SWJTU
+    - Jinshajiang_Baige
+    - Jiuzhai_Heyezhai
+    - Jiuzhai_Shangshizhai
+    - Jiuzhai_Shuzhencun
+    - Leshan
+    - Luding_Moxi_SWJTU
+    - luding_tianwan
+    - MaoXian_diexi_213
+    - Maoxian_xinmo_SWJTU
+    - songpan_SWJTU
+    - Tianquan_bianpobengta-318
+    - Wenma
+    - Yaan_318_ALL
+benchmark:
+  eval_classes: [landslide]
+  train_classes: [landslide, road]
+paths:
+  work_dir: ./work_dirs_nolixian
+  cache_dir: ./data_cache_nolixian
+  log_dir: ./logs_nolixian

@@ -1,0 +1,16 @@
+dataset:
+  name: CompareLS4S1024
+  root: ./data/Compare_dataset_1024
+  classes: [landslide]
+  gsd_m: 10.0
+  tile_size: 1024
+  tile_overlap: 0
+  regions:
+    - LS4S
+benchmark:
+  eval_classes: [landslide]
+  train_classes: [landslide]
+paths:
+  work_dir: ./work_dirs_compare_ls4s_1024
+  cache_dir: ./data_cache_compare_ls4s_1024
+  log_dir: ./logs_compare_ls4s_1024

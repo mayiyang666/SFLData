@@ -1,0 +1,17 @@
+name: deeplabv3plus
+lr: 1.0e-2
+batch_size: 2
+val_batch_size: 1
+weight_decay: 1.0e-4
+optimizer: sgd
+momentum: 0.9
+backbone: resnet50
+pretrained: true
+arch:
+  dropout: 0.1
+  os: 16
+num_classes: 3
+loss:
+  type: ce
+  class_weights: null
+eval_class: landslide

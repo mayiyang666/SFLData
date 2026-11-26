@@ -1,0 +1,18 @@
+# 核心依赖（实测环境：Python 3.11，torch 2.9.1+cu128）
+# 安装 torch 请按本机 CUDA 版本走官方索引，例如：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch>=2.4
+torchvision>=0.19
+numpy>=1.24
+Pillow>=10.0
+pycocotools>=2.0.7
+omegaconf>=2.3
+tqdm>=4.65
+scipy>=1.10
+shapely>=2.0          # 仅 data_pipeline/（切片时多边形裁剪、make_valid）需要
+
+# 可选：只有训练 models/yolo26l_seg 时需要（ultralytics 8.4.x）
+# ultralytics>=8.4.0
+
+# 可选：只有跑 datasets/preconvert_ls4s_h5.py 时需要
+# h5py>=3.9

@@ -1,0 +1,18 @@
+name: mask_rcnn
+lr: 2.0e-2
+batch_size: 2
+val_batch_size: 2
+weight_decay: 1.0e-4
+optimizer: sgd
+momentum: 0.9
+backbone: resnet50_fpn_v2
+pretrained: true
+arch:
+  trainable_backbone_layers: 5
+  box_detections_per_img: 300
+  rpn_pre_nms_top_n_train: 2000
+  rpn_post_nms_top_n_train: 1000
+  rpn_pre_nms_top_n_test: 1000
+  rpn_post_nms_top_n_test: 300
+num_classes: 3
+eval_class: landslide

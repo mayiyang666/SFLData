@@ -1,0 +1,16 @@
+name: unet
+lr: 1.0e-3
+batch_size: 4
+val_batch_size: 2
+weight_decay: 1.0e-4
+optimizer: adamw
+backbone: none
+pretrained: false
+arch:
+  base_channels: 64
+  depth: 4
+num_classes: 3
+loss:
+  type: ce
+  class_weights: null
+eval_class: landslide

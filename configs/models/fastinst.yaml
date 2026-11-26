@@ -1,0 +1,31 @@
+name: fastinst
+lr: 1.0e-4
+batch_size: 2
+val_batch_size: 2
+weight_decay: 5.0e-2
+optimizer: adamw
+backbone_lr_mult: 0.1
+backbone: resnet50
+pretrained: true
+arch:
+  convs_dim: 256
+  mask_dim: 256
+  hidden_dim: 256
+  num_object_queries: 100
+  num_aux_queries: 8
+  nheads: 8
+  dim_feedforward: 1024
+  dec_layers: 3
+  pre_norm: false
+  train_num_points: 12544
+  oversample_ratio: 3.0
+  importance_sample_ratio: 0.75
+  class_weight: 2.0
+  mask_weight: 5.0
+  dice_weight: 5.0
+  cost_location: 1000.0
+  proposal_weight: 20.0
+  no_object_weight: 0.1
+  test_topk_per_image: 100
+num_classes: 3
+eval_class: landslide
